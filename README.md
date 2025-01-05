@@ -64,7 +64,6 @@ Example (cURL):
    - File: An image file (e.g., .jpg, .png)
 - Response:
    ```json
-   Copy code
    {
       "prediction": "golden retriever"
    }
@@ -75,7 +74,6 @@ Example (cURL):
 - Description: Returns the health status of the API.
 - Response:
    ```json
-   Copy code
    {
       "status": "healthy"
    }
