@@ -33,3 +33,50 @@ This repository provides a **REST API** for serving pre-trained computer vision 
    ```bash
    git clone https://github.com/yourusername/cv-api-project.git
    cd cv-api-project
+
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+
+3. **Download the pre-trained model: Run the provided script to download a ResNet-50 model:**
+   ```bash
+   python scripts/download_model.py
+
+4. **Run the API:**
+   ```bash
+   uvicorn app.main:app --reload
+
+## **Testing the API**
+Use Postman, cURL, or any HTTP client to test the endpoints.
+
+Example (cURL):
+   ```bash
+   curl -X POST "http://127.0.0.1:8000/predict/" -F "file=@data/example_images/sample.jpg"
+   ```
+
+## **Endpoints**
+
+1. /predict/
+- Method: POST
+- Description: Accepts an image file and returns a prediction.
+- Request:
+   - Content-Type: multipart/form-data
+   - File: An image file (e.g., .jpg, .png)
+- Response:
+   ```json
+   Copy code
+   {
+      "prediction": "golden retriever"
+   }
+   ```
+
+2. /health/
+- Method: GET
+- Description: Returns the health status of the API.
+- Response:
+   ```json
+   Copy code
+   {
+      "status": "healthy"
+   }
+   ```
