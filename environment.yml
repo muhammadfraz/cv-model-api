@@ -1,0 +1,13 @@
+name: cv-rest-api
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy
+  - opencv
+  - fastapi
+  - flask
+  - pip:
+    - opencv-python
+    - fiftyone
