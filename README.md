@@ -77,4 +77,7 @@ Example (cURL):
    {
       "status": "healthy"
    }
-   ```
+
+## Things To Do
+1. Test with model
+2. Write tests
